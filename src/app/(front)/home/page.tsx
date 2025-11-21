@@ -1,5 +1,3 @@
-export const runtime = 'edge';
-
 import Hero from '@/components/hero';
 import ShowsContainer from '@/components/shows-container';
 import { MediaType, type Show } from '@/types';
@@ -9,6 +7,7 @@ import MovieService from '@/services/MovieService';
 import { Genre } from '@/enums/genre';
 import { getRandomShow } from '@/lib/utils';
 
+export const runtime = 'edge';
 export const revalidate = 3600;
 
 export default async function Home() {
