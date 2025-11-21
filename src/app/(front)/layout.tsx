@@ -11,4 +11,5 @@ const FrontLayout = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+export const runtime = 'edge';
 export default FrontLayout;
