@@ -1,9 +1,8 @@
-export const runtime = 'edge';
-
 import React from 'react';
 import EmbedPlayer from '@/components/watch/embed-player';
 import { MediaType } from '@/types';
 
+export const runtime = 'edge';
 export const revalidate = 3600;
 
 export default function Page({ params }: { params: { slug: string } }) {
