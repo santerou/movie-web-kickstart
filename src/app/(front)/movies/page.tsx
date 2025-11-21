@@ -7,6 +7,7 @@ import { getRandomShow } from '@/lib/utils';
 import MovieService from '@/services/MovieService';
 import { MediaType, type Show } from '@/types';
 
+export const runtime = 'edge';
 export const revalidate = 3600;
 
 export default async function MoviePage() {
