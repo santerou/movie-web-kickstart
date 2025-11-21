@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import Hero from '@/components/hero';
 import ShowsContainer from '@/components/shows-container';
 import { MediaType, type Show } from '@/types';
