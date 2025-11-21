@@ -5,6 +5,7 @@ import { siteConfig } from "@/configs/site";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+export const runtime = 'edge';
 export default function Index() {
   return (
     <>
