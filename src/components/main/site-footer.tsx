@@ -59,7 +59,7 @@ const SiteFooter = () => {
           >
             {siteConfig.author}
           </a>
-                  </p>
+           </p>
       </div>
       {/* </div> */}
     </footer>
