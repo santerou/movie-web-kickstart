@@ -5,8 +5,9 @@ import type { Metadata } from 'next';
 
 export const runtime = 'edge';
 
-// Metadata for SEO
+// Correct metadata
 export const metadata: Metadata = {
+  // Title with site name + slogan (no duplication)
   title: `${siteConfig.name} - ${siteConfig.slogan}`,
   description: siteConfig.description,
   keywords: siteConfig.keywords,
