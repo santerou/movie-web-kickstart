@@ -4,8 +4,33 @@ import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/configs/site";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
 
 export const runtime = 'edge';
+
+// ✅ Metadata for SEO
+export const metadata: Metadata = {
+  title: `${siteConfig.name} - ${siteConfig.slogan}`,
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  authors: [{ name: siteConfig.author, url: siteConfig.url }],
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteConfig.url,
+    title: `${siteConfig.name} - ${siteConfig.slogan}`,
+    description: siteConfig.description,
+    images: siteConfig.ogImage,
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${siteConfig.name} - ${siteConfig.slogan}`,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+    creator: siteConfig.author,
+  },
+};
 
 export default function Index() {
   return (
@@ -111,7 +136,7 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Add additional features here following the same pattern, ensuring each has an aria-hidden SVG and descriptive alt text */}
+          {/* Add additional features here with aria-hidden SVGs and descriptive alt text */}
         </div>
       </section>
     </>
