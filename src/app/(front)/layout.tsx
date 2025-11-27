@@ -13,16 +13,9 @@ import Script from 'next/script';
 
 export const runtime = 'edge';
 
-const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap',
-});
+const fontSans = FontSans({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
 
-const fontHeading = localFont({
-  src: '../assets/fonts/CalSans-SemiBold.woff2',
-  variable: '--font-heading',
-});
+const fontHeading = localFont({ src: '../assets/fonts/CalSans-SemiBold.woff2', variable: '--font-heading' });
 
 export const viewport: Viewport = {
   themeColor: [
@@ -31,12 +24,11 @@ export const viewport: Viewport = {
   ],
 };
 
-// Root-level metadata template
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
   title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`, // only append site name here
+    default: siteConfig.name, // site name only
+    template: `%s - ${siteConfig.name}`, // pages prepend their own title
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
@@ -46,8 +38,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: siteConfig.url,
     title: siteConfig.name,
-    images: siteConfig.ogImage,
     description: siteConfig.description,
+    images: siteConfig.ogImage,
     siteName: siteConfig.name,
   },
   twitter: {
@@ -64,13 +56,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          'overlflow-y-auto min-h-screen overflow-x-hidden bg-background font-sans antialiased',
-          fontSans.variable,
-          fontHeading.variable
-        )}
-      >
+      <body className={cn('overflow-y-auto min-h-screen overflow-x-hidden bg-background font-sans antialiased', fontSans.variable, fontHeading.variable)}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
           <TailwindIndicator />
