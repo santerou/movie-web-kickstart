@@ -6,13 +6,6 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
 
-import { redirect } from "next/navigation";
-
-export default function Index() {
-  redirect("/home");
-}
-
-
 export const metadata: Metadata = {
   title: siteConfig.slogan, // layout prepends site name
   description: siteConfig.description,
