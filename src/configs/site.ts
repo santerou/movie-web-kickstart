@@ -32,10 +32,10 @@ export const siteConfig = {
   ],
 
   // Website URL (temporary Pages.dev URL)
-  url: "https://movieflix-28.pages.dev",
+  url: "https://streamgoblin.com",
 
   // OpenGraph / social image
-  ogImage: "https://movieflix-28.pages.dev/images/hero.jpg",
+  ogImage: "https://streamgoblin.com/images/hero.jpg",
 
   // Social & links
   links: {
